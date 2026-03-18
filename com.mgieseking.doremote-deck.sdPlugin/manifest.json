@@ -7,36 +7,51 @@
       "UUID": "com.mgieseking.doremote-deck.connect",
       "Name": "Connect to Dorico",
       "Tooltip": "Establish connection to Dorico",
-      "Icon": "images/connect",
+      "Icon": "imgs/actions/connect",
       "PropertyInspectorPath": "ui/connect.html",
       "States": [
-        {"Image": "images/connect", "Title": "Connect", "TitleAlignment": "middle"},
-        {"Image": "images/connect", "Title": "Disconnect", "TitleAlignment": "middle"}
+        {
+          "Image": "imgs/actions/empty",
+          "Title": "Connect",
+          "TitleAlignment": "middle"
+        },
+        {
+          "Image": "imgs/actions/empty",
+          "Title": "Disconnect",
+          "TitleAlignment": "middle"
+        }
       ]
     },
     {
       "UUID": "com.mgieseking.doremote-deck.command",
       "Name": "Send Command",
       "Tooltip": "Send a command to Dorico",
-      "Icon": "images/command",
+      "Icon": "imgs/actions/send-command",
       "PropertyInspectorPath": "ui/send-command.html",
       "SupportedInMultiActions": true,
       "States": [
-        {"Image": "images/command", "TitleAlignment": "middle"}
+        {
+          "Image": "imgs/actions/empty",
+          "Title": "Send\nCommand",
+          "TitleAlignment": "middle"
+        }
       ]
     },
     {
       "UUID": "com.mgieseking.doremote-deck.commands",
       "Name": "Send Multiple Commands",
       "Tooltip": "Send a sequence of commands to Dorico",
-      "Icon": "images/commands",
+      "Icon": "imgs/actions/send-commands",
       "PropertyInspectorPath": "ui/send-commands.html",
       "SupportedInMultiActions": true,
       "States": [
-        {"Image": "images/commands", "Title": "Send\nCommand\nSequence", "TitleAlignment": "middle"}
+        {
+          "Image": "imgs/actions/empty",
+          "Title": "Send\nCommand\nSequence",
+          "TitleAlignment": "middle"
+        }
       ]
     }
-
   ],
   "Category": "Dorico Remote",
   "CategoryIcon": "imgs/plugin/category-icon",
