@@ -1,4 +1,6 @@
 ## Doremote Deck
+<img align="right" width="200" src="https://github.com/user-attachments/assets/4b52009f-38fd-4cab-8f29-2c30d7dfd0fb" />
+
 A Stream Deck plugin designed to send commands to Steinberg's music notation software Dorico via the
 WebSocket-based Remote Control API. The plugin relies on the [Doremote](https://github.com/mgieseki/doremote)
 shared library to handle the communication between the plugin and Dorico. Because the Doremote library is
@@ -16,6 +18,9 @@ prompt in Dorico, subsequent connections are automatic because the plugin reuses
 If the *Automatically reconnect to Dorico* option is enabled in the button properties, the plugin will
 attempt to reconnect in the background without requiring a button press. Once Dorico is running, the
 connection is automatically established within a few seconds.
+
+<img alt="Connect to Dorico" src="https://github.com/user-attachments/assets/31eb7200-2ca5-4bef-a0b7-87d1219fcbf9" />
+
 
 #### Send Command
 Sends a specific command, like `Edit.ShowAccidental`, to Dorico. To my knowledge, there is currently no
@@ -36,11 +41,16 @@ with no spaces in between. For example:
 UI.InvokePropertyChangeValue?Type=kNoteAccidentalVisibility_v3,Value=kRoundBrackets
 ```
 
+<img alt="Send Command" src="https://github.com/user-attachments/assets/534496e6-9ec8-47a5-8186-95f8f5c9eb54" />
+
+
 #### Send Multiple Commands
 Similar to the previous action, this one allows you to send a sequence of multiple commands to Dorico.
 Commands are entered into the property inspector's text area and must be separated by semicolons and/or
 newlines. If Dorico returns an error for any command in the sequence, execution stops immediately, and the
 remaining commands are not sent.
+
+<img alt="Send Multiple Commands" src="https://github.com/user-attachments/assets/b33dfaa1-bab3-4c94-9d06-b2d3abc583c2" />
 
 ## Build Requirements
 To build the plugin from the sources, [Node.js](https://nodejs.org) and
