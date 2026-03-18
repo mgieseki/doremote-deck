@@ -21,7 +21,6 @@ connection is automatically established within a few seconds.
 
 <img alt="Connect to Dorico" src="https://github.com/user-attachments/assets/31eb7200-2ca5-4bef-a0b7-87d1219fcbf9" />
 
-
 #### Send Command
 Sends a specific command, like `Edit.ShowAccidental`, to Dorico. To my knowledge, there is currently no
 official documentation for the available Dorico commands. However, you can use the demo applications included
@@ -43,7 +42,6 @@ UI.InvokePropertyChangeValue?Type=kNoteAccidentalVisibility_v3,Value=kRoundBrack
 
 <img alt="Send Command" src="https://github.com/user-attachments/assets/534496e6-9ec8-47a5-8186-95f8f5c9eb54" />
 
-
 #### Send Multiple Commands
 Similar to the previous action, this one allows you to send a sequence of multiple commands to Dorico.
 Commands are entered into the property inspector's text area and must be separated by semicolons and/or
@@ -52,9 +50,14 @@ remaining commands are not sent.
 
 <img alt="Send Multiple Commands" src="https://github.com/user-attachments/assets/b33dfaa1-bab3-4c94-9d06-b2d3abc583c2" />
 
+## Installation
+To install the plugin, just download the latest release from [here](https://github.com/mgieseki/doremote-deck/releases)
+and double-click on the file. Now the new category *Dorico Remote* or *Doremote Deck* should appear in your
+Stream Deck application.
+
 ## Build Requirements
-To build the plugin from the sources, [Node.js](https://nodejs.org) and
-the [Stream Deck SDK](https://docs.elgato.com/streamdeck/sdk/introduction/getting-started) must be installed.
+If you want to build the plugin on your own, you need to have [Node.js](https://nodejs.org) and
+the [Stream Deck SDK](https://docs.elgato.com/streamdeck/sdk/introduction/getting-started) installed.
 Additionally, Microsoft Visual Studio (the free Community Edition is sufficient) is required to compile the
 *Doremote* Node.js bindings.
 
