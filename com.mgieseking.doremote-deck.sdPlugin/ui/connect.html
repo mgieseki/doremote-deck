@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Connection to Dorico</title>
+    <meta charset="utf-8" />
+    <script src="./sdpi-components.js"></script>
+  </head>
+  <body>
+    <sdpi-item label="Port">
+      <sdpi-textfield setting="port" pattern="^[0-9]+$" placeholder="4560" global/>
+    </sdpi-item>
+    <sdpi-item>
+      <sdpi-checkbox setting="autoReconnect" default="true" label="Automatically reconnect to Dorico" global/>
+    </sdpi-item>
+    <sdpi-item label="Session Token">
+      <sdpi-textfield id="token" disabled/>
+    </sdpi-item>
+    <sdpi-item>
+      <div class="sdpi-item" id="version"></div>
+    </sdpi-item>
+    <script>
+      const {streamDeckClient} = SDPIComponents;
+
+      function updateInfo(payload) {
+        document.getElementById("token").value = payload.token;
+        if (payload.version)
+          document.getElementById("version").innerText = "Connected to Dorico "+payload.version;
+      }
+
+      (async function () {
+        const info = await streamDeckClient.getConnectionInfo();
+        streamDeckClient.sendToPropertyInspector.subscribe((ev) => {
+          updateInfo(ev.payload);
+        });
+        streamDeckClient.send("sendToPlugin", {
+          port: document.getElementById("port")
+        });
+      })();
+    </script>
+  </body>
+</html>

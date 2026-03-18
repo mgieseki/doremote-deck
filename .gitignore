@@ -1,0 +1,11 @@
+node_modules/
+*.sdPlugin/bin/
+*.sdPlugin/bin/
+*.sdPlugin/logs/
+*.sdPlugin/native/
+dist/
+build/
+out/
+*.dll
+*.swp
+package-lock.json

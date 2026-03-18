@@ -1,0 +1,61 @@
+{
+  "Name": "Doremote Deck",
+  "Version": "0.1.0.0",
+  "Author": "Martin Gieseking",
+  "Actions": [
+    {
+      "UUID": "com.mgieseking.doremote-deck.connect",
+      "Name": "Connect to Dorico",
+      "Tooltip": "Establish connection to Dorico",
+      "Icon": "images/connect",
+      "PropertyInspectorPath": "ui/connect.html",
+      "States": [
+        {"Image": "images/connect", "Title": "Connect", "TitleAlignment": "middle"},
+        {"Image": "images/connect", "Title": "Disconnect", "TitleAlignment": "middle"}
+      ]
+    },
+    {
+      "UUID": "com.mgieseking.doremote-deck.command",
+      "Name": "Send Command",
+      "Tooltip": "Send a command to Dorico",
+      "Icon": "images/command",
+      "PropertyInspectorPath": "ui/send-command.html",
+      "SupportedInMultiActions": true,
+      "States": [
+        {"Image": "images/command", "TitleAlignment": "middle"}
+      ]
+    },
+    {
+      "UUID": "com.mgieseking.doremote-deck.commands",
+      "Name": "Send Multiple Commands",
+      "Tooltip": "Send a sequence of commands to Dorico",
+      "Icon": "images/commands",
+      "PropertyInspectorPath": "ui/send-commands.html",
+      "SupportedInMultiActions": true,
+      "States": [
+        {"Image": "images/commands", "Title": "Send\nCommand\nSequence", "TitleAlignment": "middle"}
+      ]
+    }
+
+  ],
+  "Category": "Dorico Remote",
+  "CategoryIcon": "imgs/plugin/category-icon",
+  "CodePath": "bin/plugin.js",
+  "Description": "Send commands to Dorico",
+  "Icon": "imgs/plugin/marketplace",
+  "SDKVersion": 3,
+  "Software": {
+    "MinimumVersion": "6.9"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "--inspect=127.0.0.1:12345"
+  },
+  "UUID": "com.mgieseking.doremote-deck"
+}
